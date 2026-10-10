@@ -51,7 +51,7 @@
     "url": "https://github.com/aicw-io/aicw-video/issues"
   },
   "author": "AICW.io",
-  "license": "AGPL-3.0-only",
+  "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.12.1",
     "@tensorflow/tfjs-backend-wasm": "4.22.0",

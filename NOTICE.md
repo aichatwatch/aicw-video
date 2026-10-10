@@ -1,6 +1,6 @@
 # AICW Video Notices
 
-AICW Video is licensed under the GNU Affero General Public License v3.0.
+AICW Video is licensed under the MIT License.
 See `LICENSE` for the full license text.
 
 This project uses third-party open-source packages distributed through npm.

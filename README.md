@@ -255,4 +255,4 @@ descriptions in the current release.
 
 PRs welcome. See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
-AICW Video is licensed under AGPL-3.0. See [LICENSE](LICENSE).
+AICW Video is licensed under the MIT License. See [LICENSE](LICENSE).
