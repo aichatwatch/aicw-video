@@ -62,7 +62,7 @@ https://github.com/user-attachments/assets/82c7be62-4bdb-40a0-93bb-76aa98c84e29
 ### From Homebrew
 
 ```bash
-brew install aicw-io/tap/aicw-video
+brew install aichatwatch/tap/aicw-video
 ```
 
 ## Run as AI Agent for Claude, Codex, ChatGPT
@@ -134,12 +134,12 @@ Files are stored in the AICW Video projects folder:
   previews. Reopen after the build finishes.
 - **Port 8764 is busy:** the hub scans nearby ports. Check terminal output for
   the actual URL.
-- If nothing helps, [create new issue](https://github.com/aicw-io/aicw-video/issues/new)
+- If nothing helps, [create new issue](https://github.com/aichatwatch/aicw-video/issues/new)
 
 ### From Source
 
 ```bash
-git clone https://github.com/aicw-io/aicw-video
+git clone https://github.com/aichatwatch/aicw-video
 cd aicw-video
 ./scripts/setup.sh
 npm link
@@ -178,7 +178,7 @@ Homebrew pulls Node.js, ffmpeg-full, and whisper-cpp as dependencies. Release ru
 To install the development build from the upstream `main` branch:
 
 ```bash
-brew install --HEAD aicw-io/tap/aicw-video
+brew install --HEAD aichatwatch/tap/aicw-video
 ```
 
 ## Caveats

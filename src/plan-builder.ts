@@ -996,10 +996,10 @@ function buildHtml(args: {
     <span class="appbar-spacer"></span>
     <div class="appbar-actions">
       <span id="status" class="autosave-indicator" aria-live="polite" title="Edits save automatically">auto-saved ✓</span>
-      <a class="appbar-gh iconbtn" href="https://github.com/aicw-io/aicw-video" target="_blank" rel="noopener" aria-label="aicw-video on GitHub" title="aicw-video on GitHub">
+      <a class="appbar-gh iconbtn" href="https://github.com/aichatwatch/aicw-video" target="_blank" rel="noopener" aria-label="aicw-video on GitHub" title="aicw-video on GitHub">
         <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 .8a11.2 11.2 0 0 0-3.54 21.83c.56.1.76-.24.76-.54v-2.1c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.73 1.16 1.73 1.16 1 .1 1.28 2.02 2.92 1.44.1-.73.39-1.22.71-1.5-2.5-.28-5.13-1.25-5.13-5.57 0-1.23.44-2.24 1.16-3.03-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.1 1.16A10.7 10.7 0 0 1 12 6.1c.96 0 1.92.13 2.82.38 2.15-1.46 3.1-1.16 3.1-1.16.61 1.55.23 2.7.11 2.98.72.79 1.16 1.8 1.16 3.03 0 4.33-2.63 5.28-5.14 5.56.4.35.76 1.03.76 2.08v3.12c0 .3.2.65.77.54A11.2 11.2 0 0 0 12 .8Z"/></svg>
       </a>
-      <a class="appbar-site" href="https://www.aicw.io" target="_blank" rel="noopener">www.aicw.io</a>
+      <a class="appbar-site" href="https://aichatwatch.com" target="_blank" rel="noopener">aichatwatch.com</a>
       <button id="theme-toggle" class="iconbtn" type="button" aria-label="Toggle theme" title="Toggle theme">
         <svg class="theme-ico-light" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         <svg class="theme-ico-dark" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" hidden><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>

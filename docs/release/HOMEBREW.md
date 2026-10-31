@@ -1,7 +1,7 @@
 # Homebrew Release Runbook
 
 This repo is packaged for Homebrew through the separate
-`aicw-io/homebrew-tap` repository. In the EE workspace, that tap is checked out
+`aichatwatch/homebrew-tap` repository. In the EE workspace, that tap is checked out
 as the `homebrew-tap/` submodule.
 
 ## Current Install Path
@@ -9,13 +9,13 @@ as the `homebrew-tap/` submodule.
 Users install the stable release from the tap:
 
 ```bash
-brew install aicw-io/tap/aicw-video
+brew install aichatwatch/tap/aicw-video
 ```
 
 Users can install the development build from the upstream `main` branch:
 
 ```bash
-brew install --HEAD aicw-io/tap/aicw-video
+brew install --HEAD aichatwatch/tap/aicw-video
 ```
 
 ## Publish To npm
@@ -70,13 +70,13 @@ url "https://registry.npmjs.org/aicw-video/-/aicw-video-1.0.0.tgz"
 sha256 "REPLACE_WITH_SHA256"
 version "1.0.0"
 
-head "https://github.com/aicw-io/aicw-video.git", branch: "main"
+head "https://github.com/aichatwatch/aicw-video.git", branch: "main"
 ```
 
 Keep the `head` line so development installs continue to work:
 
 ```bash
-brew install --HEAD aicw-io/tap/aicw-video
+brew install --HEAD aichatwatch/tap/aicw-video
 ```
 
 ## Validate Locally
@@ -86,16 +86,16 @@ From the tap checkout, register the local checkout as the tap:
 ```bash
 cd homebrew-tap
 ruby -c Formula/aicw-video.rb
-brew tap aicw-io/tap "$PWD"
-brew audit --strict aicw-io/tap/aicw-video
-brew install --build-from-source aicw-io/tap/aicw-video
+brew tap aichatwatch/tap "$PWD"
+brew audit --strict aichatwatch/tap/aicw-video
+brew install --build-from-source aichatwatch/tap/aicw-video
 aicw-video doctor
 ```
 
 For a development install:
 
 ```bash
-brew install --HEAD aicw-io/tap/aicw-video
+brew install --HEAD aichatwatch/tap/aicw-video
 ```
 
 ## Release Order
@@ -105,5 +105,5 @@ brew install --HEAD aicw-io/tap/aicw-video
 3. Tag and push the matching source release.
 4. Update `homebrew-tap/Formula/aicw-video.rb` with the npm tarball URL and
    SHA-256.
-5. Test `brew install aicw-io/tap/aicw-video`.
+5. Test `brew install aichatwatch/tap/aicw-video`.
 6. Push the tap update.

@@ -6,7 +6,7 @@ PRs that keep it that way are most welcome.
 ## Dev setup
 
 ```bash
-git clone https://github.com/aicw-io/aicw-video
+git clone https://github.com/aichatwatch/aicw-video
 cd aicw-video
 npm install
 npm run build
