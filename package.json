@@ -1,6 +1,6 @@
 {
   "name": "aicw-video",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "AICW Video is open-source toolkit with a CLI, MCP server, and web hub for turning videos into short clips for TikTok, Instagram, YouTube Shorts and other short video platforms.",
   "type": "module",
   "bin": {
@@ -44,13 +44,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/aicw-io/aicw-video.git"
+    "url": "https://github.com/aichatwatch/aicw-video.git"
   },
-  "homepage": "https://github.com/aicw-io/aicw-video#readme",
+  "homepage": "https://github.com/aichatwatch/aicw-video#readme",
   "bugs": {
-    "url": "https://github.com/aicw-io/aicw-video/issues"
+    "url": "https://github.com/aichatwatch/aicw-video/issues"
   },
-  "author": "AICW.io",
+  "author": "AI Chat Watch (AICW)",
   "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.12.1",
