@@ -173,7 +173,7 @@ bin/start
 #### Homebrew installation notes
 
 Homebrew pulls Node.js, ffmpeg-full, and whisper-cpp as dependencies. Release runbook:
-[`docs/release/HOMEBREW.md`](docs/release/HOMEBREW.md).
+[`maintainers/HOMEBREW.md`](https://github.com/aichatwatch/aicw-video/blob/main/maintainers/HOMEBREW.md).
 
 To install the development build from the upstream `main` branch:
 

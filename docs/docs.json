@@ -1,0 +1,36 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "name": "AICW Video",
+  "description": "AICW Video is an open-source AI agent and standalone app. It edits human video interviews into captioned, privacy-aware social clips.",
+  "favicon": "/favicon.svg",
+  "colors": { "primary": "#667eea" },
+  "navbar": {
+    "links": [
+      { "label": "GitHub", "href": "https://github.com/aichatwatch/aicw-video" },
+      { "label": "Project page", "href": "https://aichatwatch.com/aicw-video/" }
+    ],
+    "primary": { "label": "Install", "href": "/install" }
+  },
+  "navigation": {
+    "groups": [
+      { "group": "Get started", "pages": ["index", "quickstart", "install", "requirements"] },
+      { "group": "Guides", "pages": ["concepts", "workflow", "use-with-ai-agents", "privacy-and-ai-use"] },
+      { "group": "Reference", "pages": ["cli", "configuration", "mcp-tools"] },
+      { "group": "Help", "pages": ["troubleshooting", "contributing"] }
+    ]
+  },
+  "contextual": { "options": ["copy", "view", "chatgpt", "claude", "mcp"] },
+  "footer": {
+    "socials": { "github": "https://github.com/aichatwatch" },
+    "links": [
+      {
+        "header": "AI Chat Watch",
+        "items": [{ "label": "AI Chat Watch (AICW)", "href": "https://aichatwatch.com" }]
+      },
+      {
+        "header": "Privacy",
+        "items": [{ "label": "Privacy", "href": "https://aichatwatch.com/privacy/" }]
+      }
+    ]
+  }
+}
