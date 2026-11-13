@@ -25,7 +25,7 @@ Number values outside the allowed range are moved to the nearest limit.
 | `caption_animation` | `word-highlight` | The caption motion: `static`, `word-pop` or `word-highlight`. |
 | `reframe` | `letterbox-blur` | How the clip fits the target shape: `crop` or `letterbox-blur`. |
 
-The caption styles are `plain`, `tiktok-yellow`, `bold-white`, `neon`, `pastel`, `beast-impact`, `creator-thin` and `karaoke`. Add `-bottom` to the name, for example `neon-bottom`. The plan UI shows each style as a top version and a bottom version.
+The caption styles are `plain`, `tiktok-yellow`, `bold-white`, `neon`, `pastel`, `beast-impact`, `creator-thin` and `karaoke`. Add `-bottom` or `-top` to the name to choose where the captions go, for example `neon-bottom` or `neon-top`. A name without a place, such as `neon`, means the bottom version. The plan UI shows each style as a top version and a bottom version.
 
 ### ai_cli_tools
 
