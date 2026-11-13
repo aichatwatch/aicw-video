@@ -122,22 +122,14 @@ export function normalizeCaptionStyle(value: unknown): CaptionStyleId {
   const raw = typeof value === "string" ? value.trim() : "";
   const aliases: Record<string, CaptionStyleId> = {
     "plain": "plain-bottom",
-    "plain-top": "plain-bottom",
     "tiktok-yellow": "tiktok-yellow-bottom",
-    "tiktok-yellow-top": "tiktok-yellow-bottom",
     "bold-white": "bold-white-bottom",
-    "bold-white-top": "bold-white-bottom",
     "neon": "neon-bottom",
-    "neon-top": "neon-bottom",
     "pastel": "pastel-bottom",
-    "pastel-top": "pastel-bottom",
     "mrbeast-impact": "beast-impact-bottom",
     "beast-impact": "beast-impact-bottom",
-    "beast-impact-top": "beast-impact-bottom",
     "creator-thin": "creator-thin-bottom",
-    "creator-thin-top": "creator-thin-bottom",
     "karaoke": "karaoke-bottom",
-    "karaoke-top": "karaoke-bottom",
   };
   const mapped = aliases[raw] ?? raw;
   return CAPTION_STYLE_SET.has(mapped) ? mapped as CaptionStyleId : "plain-bottom";

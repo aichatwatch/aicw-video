@@ -1,0 +1,102 @@
+---
+title: Use with AI agents
+description: Connect Claude Code, Claude Desktop, Codex or ChatGPT to AICW Video through MCP.
+---
+
+AICW Video has a local MCP server and a packaged Claude skill. MCP (Model Context Protocol) lets an AI host call the tools of AICW Video. The host can import a video, analyze it, make a plan, open the review hub and render clips.
+
+The MCP server uses standard input and output. The host starts it with the command `aicw-video mcp`.
+
+## See the setup for your host
+
+Run this command. It prints the setup for Claude Code, Claude Desktop, Codex and ChatGPT.
+
+```sh
+aicw-video setup-mcp
+```
+
+## Choose your host
+
+<Tabs>
+  <Tab title="Claude Code">
+    Claude Code is the recommended path. Register AICW Video with this command.
+
+    ```sh
+    claude mcp add aicw-video -- aicw-video mcp
+    ```
+
+    Check that it is registered.
+
+    ```sh
+    claude mcp list
+    ```
+
+    To remove it, run this command.
+
+    ```sh
+    claude mcp remove aicw-video
+    ```
+  </Tab>
+  <Tab title="Claude Desktop">
+    Open the file `~/Library/Application Support/Claude/claude_desktop_config.json`. Add the JSON that `aicw-video setup-mcp` prints. Then quit Claude Desktop with Cmd+Q and open it again.
+
+    ```sh
+    aicw-video setup-claude-desktop
+    ```
+  </Tab>
+  <Tab title="Codex CLI">
+    Open the file `~/.codex/config.toml`. Add the TOML that `aicw-video setup-mcp` prints. Then restart Codex. Ask Codex to call `list_projects` to test the link.
+
+    ```sh
+    aicw-video setup-codex
+    ```
+  </Tab>
+  <Tab title="ChatGPT">
+    ChatGPT Developer Mode imports remote MCP servers. These use SSE or streaming HTTP. The command `aicw-video mcp` is a local server, so ChatGPT cannot use it. Do not paste the local command into the remote MCP URL field.
+
+    To use OpenAI tools with AICW Video today, use Codex CLI.
+  </Tab>
+</Tabs>
+
+## Add the Claude skill
+
+The package has a Claude skill. The skill helps Claude pick AICW Video when you use natural language. It works with MCP.
+
+1. Start the hub with `aicw-video`.
+2. Open the **How To Use** tab and find **Claude Skill**.
+3. Copy the skill into `~/.claude/skills/aicw-video/SKILL.md`.
+
+## Ask for clips
+
+Use a prompt like this one.
+
+```text
+use aicw-video to cut /path/to/video.mov into clips
+```
+
+The agent follows this order:
+
+1. It calls `create_project` with your files.
+2. It calls `analyze_project`.
+3. It calls `review_project` and gives you the local review link.
+4. You review ranges, captions and privacy options in the hub.
+5. If you ask for changes, it calls `get_clip_plan`, changes only the fields that you named, and calls `save_clip_plan`.
+6. When you ask, it renders with `render_clip` or `render_all_clips`.
+
+<Frame>
+  <img src="/img/aicw-video-from-claude-1.png" alt="Claude Code receives the prompt to cut a video into clips. It creates an AICW Video project and runs the analysis." />
+</Frame>
+
+<Frame>
+  <img src="/img/aicw-video-from-claude-2.png" alt="Claude Code saves a plan with two clips, renders them and reports the output folder." />
+</Frame>
+
+The agent returns the output folder. The files are in `shorts/render-` and a time stamp.
+
+<Note>
+When AI scene analysis is on, the AI host can see sampled frames and transcript text. See [Privacy and AI use](/privacy-and-ai-use).
+</Note>
+
+## Tools
+
+The server has 15 tools. See [MCP tools](/mcp-tools).

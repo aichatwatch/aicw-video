@@ -1,0 +1,81 @@
+---
+title: Install
+description: Install AICW Video with Homebrew, npm or from source.
+---
+
+AICW Video runs on macOS today. Windows support is planned. Choose one of the three ways below.
+
+## Homebrew
+
+Homebrew is the recommended way. Homebrew installs Node.js, ffmpeg-full and whisper-cpp as dependencies. Run this command.
+
+```sh
+brew install aichatwatch/tap/aicw-video
+```
+
+If you want the development build from the `main` branch of the upstream repository, run this command.
+
+```sh
+brew install --HEAD aichatwatch/tap/aicw-video
+```
+
+## npm
+
+The npm package is named `aicw-video`. It needs Node.js 20 or later. npm does not install ffmpeg-full or whisper-cpp. Install them first. See [Requirements](/requirements).
+
+```sh
+npm install -g aicw-video
+```
+
+## From source
+
+Use this way if you want to change the code. First clone the repository.
+
+```sh
+git clone https://github.com/aichatwatch/aicw-video
+```
+
+Go into the folder.
+
+```sh
+cd aicw-video
+```
+
+Run the setup script. On macOS, the script installs missing system tools with Homebrew. Then it installs the npm dependencies, builds the app and runs the preflight check.
+
+```sh
+./scripts/setup.sh
+```
+
+Link the `aicw-video` command so that you can run it from any folder.
+
+```sh
+npm link
+```
+
+If you do not want to link the command, run it from the clone.
+
+```sh
+node dist/cli.js doctor
+```
+
+```sh
+node dist/cli.js home
+```
+
+To build and start the hub from a source checkout, run `npm start`. This runs `bin/start`. The script `bin/dev` also builds the app and starts the hub.
+
+## Check the install
+
+Run the preflight check. It reports each missing tool.
+
+```sh
+aicw-video doctor
+```
+
+The first time you transcribe a video, AICW Video downloads a speech model. The model is the file `ggml-base.en.bin`. It is about 140 MB. AICW Video saves it in `~/.cache/aicw-video/`.
+
+## Next steps
+
+- [Quickstart](/quickstart)
+- [Troubleshooting](/troubleshooting)

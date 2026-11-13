@@ -1,0 +1,67 @@
+---
+title: Quickstart
+description: Install AICW Video and make your first captioned clips.
+---
+
+This page shows the shortest path from a video file to rendered clips. You need a Mac. See [Requirements](/requirements) for the full list.
+
+<Steps>
+  <Step title="Install">
+    Install AICW Video with Homebrew. Homebrew also installs Node.js, ffmpeg-full and whisper-cpp.
+
+    ```sh
+    brew install aichatwatch/tap/aicw-video
+    ```
+  </Step>
+  <Step title="Check your setup">
+    Run the preflight check. It lists each tool that AICW Video needs and shows what is missing.
+
+    ```sh
+    aicw-video doctor
+    ```
+  </Step>
+  <Step title="Start the hub">
+    Run the command with no arguments in a terminal. The hub opens in your browser at `http://127.0.0.1:8764/`.
+
+    ```sh
+    aicw-video
+    ```
+  </Step>
+  <Step title="Add a video">
+    In the hub, create a project and add your interview video. If you have a separate audio recording, add it too.
+  </Step>
+  <Step title="Analyze and review">
+    Analyze the project. Then open the plan UI for the video. Check clip ranges, captions, crop and privacy options.
+  </Step>
+  <Step title="Render">
+    Render the clips you want. The files go to the `shorts` folder of the video, in a folder named `render-` and a time stamp.
+  </Step>
+</Steps>
+
+## Use the command line instead
+
+If you prefer the terminal, use the `go` command. It runs audio extraction, transcription, analysis and clip suggestions. Then it opens the plan UI. Replace the path with your own file.
+
+```sh
+aicw-video import /path/to/video.mov
+```
+
+Run `go` with the project path that `import` printed.
+
+```sh
+aicw-video go --project ~/aicw-video/projects/my-video
+```
+
+## Use an AI agent instead
+
+If you use Claude Code, register AICW Video once. Then ask for clips in plain words. See [Use with AI agents](/use-with-ai-agents).
+
+```sh
+claude mcp add aicw-video -- aicw-video mcp
+```
+
+## Next steps
+
+- [Concepts](/concepts) explains projects, plans and the hub.
+- [Typical workflow](/workflow) shows each screen.
+- [CLI reference](/cli) lists every command.

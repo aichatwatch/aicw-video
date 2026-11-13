@@ -1,0 +1,86 @@
+---
+title: Typical workflow
+description: Go from an interview video to rendered clips, screen by screen.
+---
+
+The workflow has four parts. You add the media. AICW Video analyzes it. You review the plan. You render the clips.
+
+## 1. Add your media
+
+Start the hub with the `aicw-video` command. Create a project. Add the interview video. If you have a separate audio recording, add it too. AICW Video can find the audio that matches the video and align it.
+
+## 2. Analyze the project
+
+Analyze the project. AICW Video then does these jobs:
+
+- It transcribes the speech on your computer.
+- It syncs external audio.
+- It detects faces on your computer.
+- It suggests short clips.
+
+If you turn on AI scene analysis, it also asks an AI tool to describe the video. See [Privacy and AI use](/privacy-and-ai-use).
+
+## 3. Review the plan
+
+Open the plan UI. Use the **Edit** tab of a clip to change the range and the captions. The page shows the clip in a preview. Each key moment has a thumbnail and a caption that you can edit. Move the markers on the track bar to include or exclude moments. The page saves your changes on every change.
+
+<Frame>
+  <img src="/img/aicw-video-screenshot-1.png" alt="The Edit tab of a clip in the plan UI. A video preview with a caption sits beside a list of key moments, each with a thumbnail and caption text." />
+</Frame>
+
+Use the **Settings** tab to choose how the clip looks. You can set these options:
+
+- **Caption style.** Choose a style. The plan UI shows each style with the captions at the top and at the bottom.
+- **Animation.** Choose static, word pop or word highlight. Word highlight makes the active word bigger.
+- **Reframe.** Choose to crop the video to the target shape, or to keep the full frame on a blurred background.
+- **Face emoji.** Replace detected faces with an emoji. This feature is alpha.
+- **Voice-over.** Replace the clip audio with a computer voice. This feature is alpha, and it works on macOS only.
+
+<Frame>
+  <img src="/img/aicw-video-screenshot-2.png" alt="The Settings tab of a clip. A row of caption style previews, with bold white bottom selected, above the animation, reframe, face emoji and voice-over options." />
+</Frame>
+
+<Frame>
+  <img src="/img/aicw-video-screenshot-3.png" alt="The face emoji menu open in the Settings tab. The list shows emoji such as Smile, Grin, Laugh, Wink and Star." />
+</Frame>
+
+<Note>
+The caption preview in the plan UI is approximate. The final ffmpeg render is the authority.
+</Note>
+
+## 4. Render the clips
+
+Choose **Render...** on a clip and pick the formats that you want. AICW Video can render these formats:
+
+| Format | Size | Use |
+| --- | --- | --- |
+| `9:16` | 1080 x 1920 | TikTok and Instagram Reels |
+| `youtube-shorts` | 1080 x 1920 | YouTube Shorts |
+| `1:1` | 1080 x 1080 | Instagram square feed |
+| `4:5` | 1080 x 1350 | Instagram tall feed |
+| `linkedin` | 1080 x 1080 | LinkedIn square video |
+| `16:9` | 1920 x 1080 | YouTube landscape |
+
+The files go to this folder.
+
+```text
+~/aicw-video/projects/<project>/<video>/shorts/render-<timestamp>/
+```
+
+Each render run makes a new folder. This keeps the result of each try. The link `shorts/latest` points to the newest folder.
+
+<Frame>
+  <img src="/img/aicw-video-side-illustration.gif" alt="An animation of a clip with a side illustration next to the speaker." />
+</Frame>
+
+## Make a tutorial from a clip
+
+For a screencast or a demo, you can export one clip as a step-by-step tutorial. The tutorial uses the captioned key moments and frames of the clip. Use **Export tutorial** in the plan UI, the `tutorial` command, or the `export_clip_tutorial` MCP tool. See the [CLI reference](/cli).
+
+## Do the same work with an AI agent
+
+An AI agent can do all of these steps for you. See [Use with AI agents](/use-with-ai-agents).
+
+<Frame>
+  <img src="/img/aicw-video-from-claude-3.png" alt="A Finder window with two rendered clips, 01-developers-love-the-new-model.mp4 and 02-daily-messages-are-up-in-early-august.mp4." />
+</Frame>

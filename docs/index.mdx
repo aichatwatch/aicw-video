@@ -1,0 +1,44 @@
+---
+title: AICW Video
+description: Edit human video interviews into captioned, privacy-aware social clips.
+---
+
+AICW Video is an open-source AI agent and standalone app. It turns a video interview into short clips for social platforms. The clips have captions. You can hide faces and voices in them.
+
+AICW Video runs on your Mac. It has a command line tool, a local web page called the hub, and an MCP server. MCP (Model Context Protocol) is the way an AI tool such as Claude Code calls other programs.
+
+<Frame>
+  <img src="/img/aicw-video-from-claude-2.png" alt="Claude Code in a terminal. It reports that it cut a video into two vertical 9:16 clips with captions." />
+</Frame>
+
+## What it does
+
+- **Syncs separate audio tracks.** It finds an external audio file that matches the video and aligns it.
+- **Makes captions.** It transcribes speech on your computer. You preview the captions and then render them into the video.
+- **Protects faces.** It finds faces on your computer. It blurs them or covers them with emoji.
+- **Protects voices.** It can replace the speaker's voice with a computer voice. This feature is alpha.
+- **Adds side illustrations.** It can make an illustration for half of the screen or for the whole video. This feature is beta.
+- **Suggests clips.** It finds strong ranges in the video. AI scene analysis is optional.
+- **Exports social formats.** It renders MP4 files for TikTok, Instagram Reels, YouTube Shorts, LinkedIn, Instagram feed and YouTube landscape.
+- **Shows a live preview.** You check ranges, captions, crop, privacy and format before you render.
+
+## Where to start
+
+<CardGroup cols={2}>
+  <Card title="Quickstart" href="/quickstart">
+    Make your first clips in a few steps.
+  </Card>
+  <Card title="Install" href="/install">
+    Install with Homebrew, npm or from source.
+  </Card>
+  <Card title="Use with AI agents" href="/use-with-ai-agents">
+    Connect Claude Code, Claude Desktop or Codex.
+  </Card>
+  <Card title="Privacy and AI use" href="/privacy-and-ai-use">
+    See what stays on your computer.
+  </Card>
+</CardGroup>
+
+## Status
+
+AICW Video works on macOS today. Windows support is planned. The project uses the MIT license. It has no telemetry.
